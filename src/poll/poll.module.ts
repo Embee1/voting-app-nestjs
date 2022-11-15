@@ -5,9 +5,10 @@ import { UsersModule } from 'src/users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from 'src/users/entities/user.entity';
 import { Poll } from './entities/poll.entity';
+import { PollOptionsReposiory, PollReposiory } from './poll.repository';
 
 @Module({
-  imports: [UsersModule, TypeOrmModule.forFeature([User, Poll])],
+  imports: [UsersModule, TypeOrmModule.forFeature([User, PollReposiory, PollOptionsReposiory])],
   controllers: [PollController],
   providers: [PollService]
 })

@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Poll } from './poll/entities/poll.entity';
 import { PollModule } from './poll/poll.module';
+import { PollOptions } from './poll/pollOptions.entity';
 import { User } from './users/entities/user.entity';
 import { UsersModule } from './users/users.module';
 
@@ -17,7 +18,7 @@ import { UsersModule } from './users/users.module';
       username: 'root',
       password: '',
       database: 'tester',
-      entities: [User, Poll],
+      entities: [User, Poll, PollOptions],
       synchronize: true,
     }),],
   controllers: [AppController],
